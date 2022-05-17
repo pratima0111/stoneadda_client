@@ -3,12 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.2",
+<<<<<<< HEAD
+    "@mui/material": "^5.6.4",
+=======
+    "@mui/material": "^5.6.3",
+    "@mui/styled-engine-sc": "^5.6.1",
+>>>>>>> 1f04394b8a26a6a4ec5d4f1902d35ec1fcc2f9fb
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
+<<<<<<< HEAD
+    "react-scripts": "^5.0.1",
+=======
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
+>>>>>>> 1f04394b8a26a6a4ec5d4f1902d35ec1fcc2f9fb
     "web-vitals": "^2.1.4"
   },
   "scripts": {
