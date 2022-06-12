@@ -47,9 +47,7 @@ const SignUp=()=> {
                     label="I accept the terms and conditions."
                 />
 
-                <Button type='Submit' color="secondary" fullWidth variant="contained" style={{ marginTop: `${10}px` }}>SIGN UP</Button>
-                 
-               
+                <Button type='Submit' color="secondary" fullWidth variant="contained" style={{ marginTop: `${10}px` }}>SIGN UP</Button>               
                 <div className="Link" style={{ marginTop: `${5}px` }}>
                 <Typography > Already have an account ?
                    <Link href={"/SignIn"} underline="hover" onClick={() => {navigate('/SignIn')}}>
