@@ -1,5 +1,5 @@
 .navbar {
-    position: fixed;
+    position: sticky;
     background-color: rgb(184, 255, 249);
     align-items: center;
     height: 50px;
