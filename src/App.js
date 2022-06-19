@@ -6,8 +6,8 @@ import FAQ from "./components/FAQ/FAQ";
 import Testimonials from "./components/Testimonials";
 import WhySell from "./components/WhySell/WhySell";
 import Home from "./components/Home";
-import Update_Password from "./components/Update_Password";
-import Forgot_Password from "./components/Forgot_Password";
+import UpdatePassword from "./components/UpdatePassword";
+import ForgotPassword from "./components/ForgotPassword";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -17,6 +17,7 @@ function App() {
       <Router>
         <Navbar />
         {/* <Home /> */}
+        
         <Routes>
           
           <Route exact path="/Home" element={<Home />}></Route>  
@@ -24,10 +25,13 @@ function App() {
           <Route exact path="/SignUp" element={<SignUp />}></Route>
           <Route exact path="/faq" element={<FAQ />}></Route>
           <Route exact path="/whySell" element={<WhySell />}></Route>
-          <Route exact path="/Update_Password" element={<Update_Password />}></Route>  
-          <Route exact path="/Forgot_Password" element={<Forgot_Password />}></Route> 
+          <Route exact path="/Update_Password" element={<UpdatePassword />}></Route>  
+          <Route exact path="/Forgot_Password" element={<ForgotPassword />}></Route> 
         </Routes>
       </Router>
+      <WhySell />
+        <Testimonials />
+        <FAQ />
     </div>
   );
 }
