@@ -30,9 +30,6 @@ function App() {
           <Route exact path="/Forgot_Password" element={<ForgotPassword />}></Route> 
         </Routes>
       </Router>
-      {/* <WhySell />
-        <Testimonials />
-        <FAQ /> */}
     </div>
   );
 }
