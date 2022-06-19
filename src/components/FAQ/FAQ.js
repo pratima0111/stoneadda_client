@@ -3,7 +3,9 @@ import { questions } from "./api";
 import MYFAQ from './MYFAQ';
 import './FAQ.css';
 
+
 const FAQ = () => {
+    
     const [data, setData] = useState(questions);
     return (
         <>

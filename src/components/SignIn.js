@@ -36,7 +36,7 @@ const SignIn=()=> {
 
                 <div className="Link" style={{ marginTop: `${10}px` }}>
                 <Typography >
-                   <Link href="#" underline="hover">
+                   <Link href={"/Update_Password"} underline="hover">
                      {'Forgot Password ?'}
                     
                      </Link>
