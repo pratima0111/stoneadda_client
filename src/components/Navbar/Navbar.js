@@ -31,7 +31,7 @@ const Navbar = () => {
                     isActive ? "activelinks" : "links"
                   }
                   onClick={handleClick}
-                  to="/Home"
+                  to="/"
                 >
                   Home
                 </NavLink>

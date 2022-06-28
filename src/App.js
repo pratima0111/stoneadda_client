@@ -9,18 +9,17 @@ import Home from "./components/Home";
 import UpdatePassword from "./components/UpdatePassword";
 import ForgotPassword from "./components/ForgotPassword";
 
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
-        {/* <Home /> */}
-        
+        <Navbar />        
         <Routes>
           
-          <Route exact path="/Home" element={<Home />}></Route>  
+          <Route exact path="/" element={<Home />}></Route>  
           <Route exact path="/SignIn" element={<SignIn />}></Route>
           <Route exact path="/SignUp" element={<SignUp />}></Route>
           <Route exact path="/faq" element={<FAQ />}></Route>
