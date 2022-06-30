@@ -8,7 +8,7 @@
     padding: 10px;
     z-index: 10;
     box-shadow: 0px 5px 5px #7B7A72;
-    width: 100%;
+    /* width: 100%; */
     top: 0%;
 }
 
@@ -136,13 +136,15 @@
         display: flex;
         justify-content: space-between;
     }
+
     .menuicon {
         display: contents;
     }
-    
+
     .navlist {
         display: none;
     }
+
     .activenavlist {
         background: rgb(184, 255, 249);
         position: fixed;
@@ -152,16 +154,19 @@
         width: 100%;
         opacity: 1;
     }
+
     ul {
-         z-index: 10;
+        z-index: 10;
         display: flex;
         flex-direction: column;
         margin: 0px;
         padding: 0px;
     }
+
     li {
         margin: 20px 0px;
     }
+
     .rnavbar {
         display: flex;
         flex-direction: row;
