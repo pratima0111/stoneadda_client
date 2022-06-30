@@ -1,7 +1,7 @@
-h2 {
+/* h2 {
     text-align: left;
     /* margin-left: 20px; */
-}
+/* }
 
 .container {
 
@@ -11,12 +11,13 @@ h2 {
 
     padding: 20px;
     /* display: inline-block; */
-    display: flex;
+/* display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    /* background-color: aqua; */
-}
+    background-color: beige;
+    grid-area: container;
+} */
 
 /* .size {
 
@@ -26,10 +27,46 @@ h2 {
 
 } */
 
-.whole {
+/* .whole {
     display: flex;
     flex-direction: row;
     align-items: center;
+}*/
+
+
+:root {
+    --main-radius: 5px;
+    --main-padding: 20px;
+}
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    height: 60vh;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    grid-template-rows: 0.2fr 1.5fr;
+    grid-template-areas:
+        "h2 h2 h2"
+        "content1 content2 content3";
+    grid-gap: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #011f1a;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    grid-area: h2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+h3 {
+    font-size: 20px;
 }
 
 .line {
@@ -37,5 +74,61 @@ h2 {
     width: 80%;
     height: 1px;
     background-color: #205375;
+    margin-left: 2rem;
+}
 
+#content1 {
+    background: #84ffff;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    transition: 1s;
+}
+
+#content2 {
+    background: #84ffff;
+    /* background-image: url("https://images.unsplash.com/photo-1655475020278-573fd0a8c140?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60");
+    background-size: cover; */
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    transition: 1s;
+
+}
+
+#content3 {
+    background: #84ffff;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    transition: 1s;
+
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 2.5fr 2.5fr 2.5fr;
+        grid-template-areas:
+            "h2"
+            "content1"
+            "content2"
+            "content3";
+
+    }
+}
+
+#content1:hover {
+    background-color: skyblue;
+    /* color: aliceblue; */
+}
+
+#content2:hover {
+    background-color: skyblue;
+    /* color: aliceblue; */
+}
+
+#content3:hover {
+    background-color: skyblue;
+    /* color: aliceblue; */
 }
