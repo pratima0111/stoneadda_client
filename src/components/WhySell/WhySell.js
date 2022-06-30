@@ -1,7 +1,7 @@
 import './WhySell.css';
 import React from 'react'
 
-export const WhySell = () => {
+const WhySell = () => {
     return (
         // <div style={{ padding: '40px' }}>
         //     <h2>Why Sell on StoneAdda.com?</h2>
@@ -48,3 +48,5 @@ export const WhySell = () => {
         </div>
     )
 }
+
+export default WhySell;

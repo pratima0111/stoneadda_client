@@ -42,7 +42,7 @@ const Navbar = () => {
                     isActive ? "activelinks" : "links"
                   }
                   onClick={handleClick}
-                  to="/WhyStoneadda"
+                  to="/WhySell"
                 >
                   Why Stoneadda?
                 </NavLink>
