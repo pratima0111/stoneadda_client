@@ -5,12 +5,66 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Checkbox from '@mui/material/Checkbox';
 import { Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
+import { Component, useState } from "react";
 
 const SignIn = () => {
 
   const PaperStyle = { padding: 20, height: '70vh', width: 350, margin: "40px auto" }
   const avatarStyle = { backgroundColor: '#1bbd7e' }
   const navigate = useNavigate();
+
+  const [firstName, setfirstName] = useState('');
+  const [password, setPassword] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [strongPasswordError, setStrongPasswordError] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setSubmitted(true);
+    const data = new FormData(event.currentTarget);
+  }
+  const handleFirstNameChange= (e) => {
+    setfirstName(e.target.value);
+  } 
+  const handlePasswordChange= (e) => {
+    setPassword(e.target.value);
+    if ( (password.match(/[a-z]/g) && password.match(
+      /[A-Z]/g) && password.match(
+      /[0-9]/g) && password.match(
+      /[^a-zA-Z\d]/g) && password.length >= 8)) {
+          setStrongPasswordError(true);
+        } 
+        else {
+          setStrongPasswordError(false);
+        }
+  }
+
+  const validateFirstName = (firstName) => {
+    if(firstName.length < 3 || firstName.length>50){
+        return "Please enter a valid username name!";
+    }
+    else{
+      return "";
+    }
+    }
+
+    const validateStrongPassword = (password) => {
+    
+      if(password.length === 0 || password.length > 50){
+        return "Password is required!";
+      }
+      else{
+        if(!strongPasswordError){
+          return  "Enter minimum 8 characters(atleast 1 uppercase, 1 lowercase, 1 number, 1 symbol)";
+        }
+        else{
+          return "";  
+        }
+        }
+      
+                                    
+  }
+
 
   return (
     <Grid>
@@ -20,8 +74,20 @@ const SignIn = () => {
           <h2>Sign In</h2>
 
         </div>
-        <TextField id="Username" label='Username' placeholder="Enter Username" fullWidth variant="standard" required />
-        <TextField id="Password" label='Password' placeholder="Enter Password" type='password' fullWidth variant="standard" required />
+
+        <form onSubmit={handleSubmit}>
+        <TextField id="Username" label='Username' placeholder="Enter Username" fullWidth variant="standard" required 
+         autoFocus
+         onChange={handleFirstNameChange}
+         error={submitted && validateFirstName(firstName)!==""}
+         helperText={submitted ? validateFirstName(firstName): ""}/>
+
+        <TextField id="Password" label='Password' placeholder="Enter Password" type='password' fullWidth variant="standard" required 
+         name="password"
+         autoComplete="new-password"
+         onChange={handlePasswordChange}
+         error={submitted && validateStrongPassword(password)!==""}
+         helperText={submitted ? validateStrongPassword(password) : ""}/>
 
         <FormControlLabel
           control={
@@ -54,7 +120,7 @@ const SignIn = () => {
 
 
         </div>
-
+        </form>
       </Paper>
     </Grid>
   )

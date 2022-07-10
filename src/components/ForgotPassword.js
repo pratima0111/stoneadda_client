@@ -5,12 +5,15 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Checkbox from '@mui/material/Checkbox';
 import { Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
+import { Component, useState } from "react";
 
 const UpdatePassword=()=> {
 
     const PaperStyle  = {padding: 20, height: '70vh', width: 350, margin: "40px auto"}
     const avatarStyle = {backgroundColor:'#1bbd7e'}
     const navigate = useNavigate();
+
+    
 
         return (
         <Grid>
